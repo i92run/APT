@@ -3,6 +3,8 @@ from gensim import corpora
 from gensim.models.coherencemodel import CoherenceModel
 from sklearn.metrics import normalized_mutual_info_score
 from sklearn.cluster import KMeans
+from sklearn.manifold import TSNE
+import matplotlib.pyplot as plt
 
 
 def get_topic_diversity(topics, num_topic, top_k):
@@ -45,3 +47,23 @@ def compute_km_purity_nmi(num_topics, y_true, y_emb):
     kmeans = KMeans(n_clusters=num_topics, random_state=42, n_init="auto").fit(np_y_emb)
     purity_score, nmi_score = compute_purity_nmi(num_topics, y_true, kmeans.labels_)
     return purity_score, nmi_score
+
+
+def visualize(topic_np, doc_np, save_path):
+    topic_y = np.array([1 for i in range(len(topic_np))])
+    doc_y = np.array([0 for i in range(len(doc_np))])
+    x = np.concatenate((doc_np, topic_np), axis=0)
+    y = np.concatenate((doc_y, topic_y), axis=0)
+    target_names = np.array(['Document', 'Topic'])
+    tsne = TSNE(n_components=2, random_state=0, metric='cosine')
+    x_tsne = tsne.fit_transform(x)
+
+    plt.figure(figsize=(10, 8))
+    for color, marker, i, target_name in zip(['lightsteelblue', 'red'], ['o', '^'], [0, 1], target_names):
+        plt.scatter(x_tsne[y == i, 0],
+                    x_tsne[y == i, 1],
+                    color=color, marker=marker, label=target_name, s=10)
+    plt.legend()
+    plt.gca().axes.xaxis.set_visible(False)
+    plt.gca().axes.yaxis.set_visible(False)
+    plt.savefig(save_path)

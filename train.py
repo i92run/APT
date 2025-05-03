@@ -1,17 +1,18 @@
 from utils.train_utils import *
 from utils.eval_utils import get_topic_diversity, get_topic_coherence, compute_purity_nmi, compute_km_purity_nmi
 from model.apt import APT, apt_loss, kl_div
-
 import argparse
-import torch
-import torch.nn.functional as F
 import os
 import pickle
+import torch
+import torch.nn.functional as F
+import numpy as np
 
-parser = argparse.ArgumentParser(description='APT')
+
+parser = argparse.ArgumentParser(description='APT_train')
 parser.add_argument('--seed', type=int, default=51, help='random seed')
-parser.add_argument('--data_path', type=str, default='./dataset/20ng.pickle', help='dataset path')
-parser.add_argument('--save_path', type=str, default='./output', help='save path')
+parser.add_argument('--data_path', type=str, default='./dataset/20ng.pickle', help='dataset load path')
+parser.add_argument('--save_path', type=str, default='./output', help='model save path')
 parser.add_argument('--topic', type=int, default=50, help='num topics')
 parser.add_argument('--tc_topk', type=int, default=15, help='top words for topic coherence')
 parser.add_argument('--td_topk', type=int, default=15, help='top words for topic diversity')
