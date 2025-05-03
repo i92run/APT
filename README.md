@@ -1,10 +1,8 @@
->📋  A template README.md for code accompanying a Machine Learning paper
+# Adaptive Pseudo-Labeling via Word Coherence for Topic Modeling
 
-# My Paper Title
+This repository is the official implementation of *Adaptive Pseudo-Labeling via Word Coherence for Topic Modeling*. We propose adaptive pseudo-labeling for topic modeling (APT), a self-supervised framework that incorporates deep metric learning to improve topic quality.
 
-This repository is the official implementation of [My Paper Title](https://arxiv.org/abs/2030.12345). 
-
->📋  Optional: include a graphic explaining your approach/main result, bibtex entry, link to demos, blog posts and tutorials
+<img src="/display/framework.png" width="672" height="320">
 
 ## Requirements
 
@@ -14,24 +12,34 @@ To install requirements:
 pip install -r requirements.txt
 ```
 
->📋  Describe how to set up the environment, e.g. pip/conda/docker commands, download datasets, etc...
+## Get started
+
+The following lists the statistics of the datasets we used.
+
+| Dataset | Source link | Docs | Words | Categories |
+| :----- | :-----: | :-----: | :-----: | :-----: |
+|*20Newsgroups* | [20NG](http://qwone.com/~jason/20Newsgroups/) | 18846 | 9994 | 20 |
+|*AG's News* | [AG](http://groups.di.unipi.it/~gulli/AG_corpus_of_news_articles.html) | 38280 | 8727 | 4 |
+|*Wikitext-103* | [Wiki](https://developer.ibm.com/exchanges/data/all/wikitext-103/) | 28591 | 10000 | N/A |
+|*Web of Science* | [WoS](https://data.mendeley.com/datasets/9rw3vkcfy4/6) | 11967 | 8813 | 7 |
+|*Yahoo Answers Topics* | [Yahoo](https://github.com/LC-John/Yahoo-Answers-Topic-Classification-Dataset) | 29156 | 8902 | 10 |
+
+The pre-processed version of benchmark datasets can be downloaded from [here](https://drive.google.com/dataset.pickle)
 
 ## Training
 
 To train the model(s) in the paper, run this command:
 
 ```train
-python train.py --input-data <path_to_data> --alpha 10 --beta 20
+python train.py --data_path ./dataset/{data.pickle}
 ```
-
->📋  Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
 
 ## Evaluation
 
-To evaluate my model on ImageNet, run:
+To evaluate our model on {data}, run:
 
 ```eval
-python eval.py --model-file mymodel.pth --benchmark imagenet
+python eval.py --data_path ./dataset/{data.pickle} --model_path {model_weights.pth} 
 ```
 
 >📋  Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below).
@@ -40,9 +48,7 @@ python eval.py --model-file mymodel.pth --benchmark imagenet
 
 You can download pretrained models here:
 
-- [My awesome model](https://drive.google.com/mymodel.pth) trained on ImageNet using parameters x,y,z. 
-
->📋  Give a link to where/how the pretrained models can be downloaded and how they were trained (if applicable).  Alternatively you can have an additional column in your results table with a link to the models.
+- [Our awesome model](https://drive.google.com/model_weight.pth) trained on all five benchmark datasets using default hyperparmeters.
 
 ## Results
 
