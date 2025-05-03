@@ -64,7 +64,7 @@ model.get_topic_word(top_k=k)
 
 ### Embedding visualization
 
-We can visualize embeddings for topics and documents using 'eval.py'. The image is stored in the 'output' folder.
+We can visualize embeddings for topics and documents using 'eval.py'. The image is stored in the './output'.
 
 <img src="/output/tSNE.png" width="320" height="320">
 
