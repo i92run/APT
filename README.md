@@ -2,7 +2,7 @@
 
 This repository is the official implementation of *Adaptive Pseudo-Labeling via Word Coherence for Topic Modeling*. We propose adaptive pseudo-labeling for topic modeling (APT), a self-supervised framework that incorporates deep metric learning to improve topic quality.
 
-<img src="/display/overview.png" width="672" height="320">
+<img src="/display/framework.png" width="672" height="320">
 
 ## Requirements
 
@@ -20,7 +20,7 @@ The following lists the statistics of the datasets we used.
 | :----- | :-----: | :-----: | :-----: | :-----: |
 |*20Newsgroups* | [20NG](http://qwone.com/~jason/20Newsgroups/) | 18846 | 9994 | 20 |
 |*AG's News* | [AG](http://groups.di.unipi.it/~gulli/AG_corpus_of_news_articles.html) | 38280 | 8727 | 4 |
-|*Wikitext-103* | [WIKI](https://developer.ibm.com/exchanges/data/all/wikitext-103/) | 28591 | 10000 | N/A |
+|*Wikitext-103* | [Wiki](https://developer.ibm.com/exchanges/data/all/wikitext-103/) | 28591 | 10000 | N/A |
 |*Web of Science* | [WoS](https://data.mendeley.com/datasets/9rw3vkcfy4/6) | 11967 | 8813 | 7 |
 |*Yahoo Answers Topics* | [Yahoo](https://github.com/LC-John/Yahoo-Answers-Topic-Classification-Dataset) | 29156 | 8902 | 10 |
 
