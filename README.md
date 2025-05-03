@@ -70,5 +70,5 @@ We can visualize embeddings for topics and documents using 'eval.py'. The image 
 
 ## Citation
 ```bib
-@inproceedings{}
+
 ```
