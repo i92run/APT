@@ -33,11 +33,13 @@ def main():
     vocab_size = len(word2id)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = APT(emb_size, args.hs, vocab_size, args.act).to(device)
+    model.vocab = word2id
     criterion = apt_loss(args.topic, args.hs, vocab_size, 64.0, 0.1).to(device)
     model.set_topic_embeddings(criterion.topic_embeddings)
     model.load_state_dict(torch.load(args.model_path))
     model.eval()
 
+    # print(model.get_topic_word(15))
     topics = model.get_topics()
     cv = get_topic_coherence(topics, args.tc_topk, data['test_parsed_news'], word2id)
     td = get_topic_diversity(topics, args.topic, args.td_topk)

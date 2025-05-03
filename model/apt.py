@@ -43,6 +43,7 @@ class APT(torch.nn.Module):
         self.emb_size = emb_size
         self.num_hiddens = num_hiddens
         self.vocab_size = vocab_size
+        self.vocab = None
         self.activation = get_activation(act)
         if act == 'glu' or act == 'swiglu':
             self.model_num_hiddens = int(num_hiddens * 2)
@@ -90,6 +91,17 @@ class APT(torch.nn.Module):
             return eps.mul_(std).add_(mu)
         else:
             return mu
+
+    def get_topic_word(self, top_k):
+        if self.vocab is not None:
+            id2word = dict()
+            for w in self.vocab:
+                id2word[self.vocab[w]] = w
+            topics = self.get_topics()
+            top_words = [[id2word[t.cpu().item()] for t in topic.argsort(descending=True)[:top_k]] for topic in topics]
+            return top_words
+        else:
+            print('Set vocab')
 
     def forward(self, doc_embedding):
         emb = self.hidden_layers(doc_embedding)
