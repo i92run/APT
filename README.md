@@ -31,7 +31,7 @@ The pre-processed version of benchmark datasets can be downloaded from [here](ht
 To train the model(s) in the paper, run this command:
 
 ```train
-python train.py --data_path ./dataset/{data.pickle}
+python train.py --data_path {data.pickle}
 ```
 
 ## Evaluation
@@ -39,7 +39,7 @@ python train.py --data_path ./dataset/{data.pickle}
 To evaluate our model on {data}, run:
 
 ```eval
-python eval.py --data_path ./dataset/{data.pickle} --model_path {model_weights.pth} 
+python eval.py --data_path {data.pickle} --model_path {model_weights.pth} 
 ```
 
 >📋  Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below).
