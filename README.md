@@ -50,12 +50,14 @@ You can download pretrained models here:
 
 ## Usage
 
-### Topic information
+### Topic's top-k words
 
 We can extract topic information, specifically the top words and their corresponding probabilities for each topic.
 
 ```python
-model.get_topic(topic_idx=36)
+model.get_topic_word(top_k=15)
+
+
 ```
 
 ### Embedding visualization
