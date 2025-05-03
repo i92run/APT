@@ -24,7 +24,7 @@ The following lists the statistics of the datasets we used.
 |*Web of Science* | [WoS](https://data.mendeley.com/datasets/9rw3vkcfy4/6) | 11967 | 8813 | 7 |
 |*Yahoo Answers Topics* | [Yahoo](https://github.com/LC-John/Yahoo-Answers-Topic-Classification-Dataset) | 29156 | 8902 | 10 |
 
-After pre-processing, we divided the dataset into training and testing. Additionally, we removed words that exist only on training or testing datasets. We uploaded the code for dataset pre-processing in a folder named 'dataset'. The pre-processed version of benchmark datasets can be downloaded from [here](https://drive.google.com/dataset.pickle)
+After pre-processing, we divided the dataset into training and testing. Additionally, we removed words that exist only on training or testing datasets. We uploaded the code for dataset pre-processing in a folder named 'dataset'. The pre-processed version of benchmark datasets can be downloaded from [here](https://drive.google.com/drive/folders/1s7vVFBEBTS4XpbsTi6LS_JsFgKGqtMMY?usp=sharing)
 
 ## Training
 
@@ -46,7 +46,7 @@ python eval.py --data_path {data.pickle} --model_path {model_weights.pth}
 
 You can download pretrained models here:
 
-- [Our model](https://drive.google.com/model_weight.pth) trained on all five benchmark datasets using default hyperparmeters.
+- [Our model](https://drive.google.com/drive/folders/1mre-F8_7be9pVpwBsSUuVoJU6VSke0w7?usp=sharing) trained on all five benchmark datasets using default hyperparmeters.
 
 ## Usage
 
