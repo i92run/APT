@@ -48,15 +48,13 @@ You can download pretrained models here:
 
 - [Our model](https://drive.google.com/model_weight.pth) trained on all five benchmark datasets using default hyperparmeters.
 
-## Results
+## Usage
 
-Our model achieves the following performance on :
+We can extract the top words and their corresponding probabilities for each topic.
 
-### [Image Classification on ImageNet](https://paperswithcode.com/sota/image-classification-on-imagenet)
-
-| Model name         | Top 1 Accuracy  | Top 5 Accuracy |
-| ------------------ |---------------- | -------------- |
-| My awesome model   |     85%         |      95%       |
+```eval
+python eval.py --data_path {data.pickle} --model_path {model_weights.pth} 
+```
 
 Our model achieves the following performance on :
 
