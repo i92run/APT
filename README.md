@@ -28,7 +28,7 @@ The pre-processed version of benchmark datasets can be downloaded from [here](ht
 
 ## Training
 
-To train the model(s) in the paper, run this command:
+To train our APT in the paper, run this command:
 
 ```train
 python train.py --data_path {data.pickle}
@@ -36,19 +36,17 @@ python train.py --data_path {data.pickle}
 
 ## Evaluation
 
-To evaluate our model on {data}, run:
+To evaluate our model on {data.pickle}, run:
 
 ```eval
 python eval.py --data_path {data.pickle} --model_path {model_weights.pth} 
 ```
 
->📋  Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below).
-
 ## Pre-trained Models
 
 You can download pretrained models here:
 
-- [Our awesome model](https://drive.google.com/model_weight.pth) trained on all five benchmark datasets using default hyperparmeters.
+- [Our model](https://drive.google.com/model_weight.pth) trained on all five benchmark datasets using default hyperparmeters.
 
 ## Results
 
@@ -60,9 +58,13 @@ Our model achieves the following performance on :
 | ------------------ |---------------- | -------------- |
 | My awesome model   |     85%         |      95%       |
 
+Our model achieves the following performance on :
+
+<img src="/output/tSNE.png" width="320" height="320">
+
 >📋  Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
 
-
-## Contributing
-
->📋  Pick a licence and describe how to contribute to your code repository. 
+## Citation
+```bib
+@inproceedings{}
+```
