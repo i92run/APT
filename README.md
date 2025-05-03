@@ -31,7 +31,7 @@ After pre-processing, we divided the dataset into training and testing. Addition
 To train our APT in the paper, run this command:
 
 ```train
-python train.py --data_path {data.pickle}
+python train.py --data_path {data.pickle} --topic 50 --tc_topk 15 --td_topk 15 --hs 512 --bs 512 --alpha 64 --mrg 0.1
 ```
 
 ## Evaluation
@@ -39,7 +39,7 @@ python train.py --data_path {data.pickle}
 To evaluate our model on {data.pickle}, run:
 
 ```eval
-python eval.py --data_path {data.pickle} --model_path {model_weights.pth} 
+python eval.py --data_path {data.pickle} --model_path {model_weights.pth}
 ```
 
 ## Pre-trained Models
