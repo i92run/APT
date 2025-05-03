@@ -50,10 +50,10 @@ You can download pretrained models here:
 
 ## Usage
 
-We can extract the top words and their corresponding probabilities for each topic.
+We can extract topic information, specifically the top words and their corresponding probabilities for each topic.
 
-```eval
-python eval.py --data_path {data.pickle} --model_path {model_weights.pth} 
+```python
+model.get_topic(topic_idx=36)
 ```
 
 Our model achieves the following performance on :
