@@ -50,17 +50,19 @@ You can download pretrained models here:
 
 ## Usage
 
+### Topic information
+
 We can extract topic information, specifically the top words and their corresponding probabilities for each topic.
 
 ```python
 model.get_topic(topic_idx=36)
 ```
 
-Our model achieves the following performance on :
+### Embedding visualization
+
+We can visualize embeddings for topics and documents using 'eval.py'. The image is stored in the 'output' folder.
 
 <img src="/output/tSNE.png" width="320" height="320">
-
->📋  Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
 
 ## Citation
 ```bib
