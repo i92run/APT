@@ -55,9 +55,11 @@ You can download pretrained models here:
 We can extract topic information, specifically the top words and their corresponding probabilities for each topic.
 
 ```python
-model.get_topic_word(top_k=15)
+model.vocab = {data['vocab_dict']}
+model.get_topic_word(top_k=k)
 
-
+[[topic1_word1, topic1_word2, ... , topic1_wordk],
+ [topic2_word1, topic2_word2, ... , topic2_wordk],...]
 ```
 
 ### Embedding visualization
