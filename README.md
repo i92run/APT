@@ -1,10 +1,6 @@
->📋  A template README.md for code accompanying a Machine Learning paper
-
 # Adaptive Pseudo-Labeling via Word Coherence for Topic Modeling
 
-This repository is the official implementation of [My Paper Title](https://arxiv.org/abs/2030.12345). 
-
->📋  Optional: include a graphic explaining your approach/main result, bibtex entry, link to demos, blog posts and tutorials
+This repository is the official implementation of Adaptive Pseudo-Labeling via Word Coherence for Topic Modeling. We propose adaptive pseudo-labeling for topic modeling (APT), a self-supervised framework that incorporates deep metric learning to improve topic quality.
 
 ## Requirements
 
