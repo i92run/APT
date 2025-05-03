@@ -24,45 +24,51 @@ The following lists the statistics of the datasets we used.
 |*Web of Science* | [WoS](https://data.mendeley.com/datasets/9rw3vkcfy4/6) | 11967 | 8813 | 7 |
 |*Yahoo Answers Topics* | [Yahoo](https://github.com/LC-John/Yahoo-Answers-Topic-Classification-Dataset) | 29156 | 8902 | 10 |
 
-The pre-processed version of benchmark datasets can be downloaded from [here](https://drive.google.com/dataset.pickle)
+After pre-processing, we divided the dataset into training and testing. Additionally, we removed words that exist only on training or testing datasets. We uploaded the code for dataset pre-processing in a folder named 'dataset'. The pre-processed version of benchmark datasets can be downloaded from [here](https://drive.google.com/dataset.pickle)
 
 ## Training
 
-To train the model(s) in the paper, run this command:
+To train our APT in the paper, run this command:
 
 ```train
-python train.py --data_path ./dataset/{data.pickle}
+python train.py --data_path {data.pickle}
 ```
 
 ## Evaluation
 
-To evaluate our model on {data}, run:
+To evaluate our model on {data.pickle}, run:
 
 ```eval
-python eval.py --data_path ./dataset/{data.pickle} --model_path {model_weights.pth} 
+python eval.py --data_path {data.pickle} --model_path {model_weights.pth} 
 ```
-
->📋  Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below).
 
 ## Pre-trained Models
 
 You can download pretrained models here:
 
-- [Our awesome model](https://drive.google.com/model_weight.pth) trained on all five benchmark datasets using default hyperparmeters.
+- [Our model](https://drive.google.com/model_weight.pth) trained on all five benchmark datasets using default hyperparmeters.
 
-## Results
+## Usage
 
-Our model achieves the following performance on :
+### Topic's top-k words
 
-### [Image Classification on ImageNet](https://paperswithcode.com/sota/image-classification-on-imagenet)
+We can extract topic information, specifically the top words and their corresponding probabilities for each topic.
 
-| Model name         | Top 1 Accuracy  | Top 5 Accuracy |
-| ------------------ |---------------- | -------------- |
-| My awesome model   |     85%         |      95%       |
+```python
+model.vocab = {data['vocab_dict']}
+model.get_topic_word(top_k=k)
 
->📋  Include a table of results from your paper, and link back to the leaderboard for clarity and context. If your main result is a figure, include that figure and link to the command or notebook to reproduce it. 
+[[topic1_word1, topic1_word2, ... , topic1_wordk],
+ [topic2_word1, topic2_word2, ... , topic2_wordk],...]
+```
 
+### Embedding visualization
 
-## Contributing
+We can visualize embeddings for topics and documents using 'eval.py'. The image is stored in the './output'.
 
->📋  Pick a licence and describe how to contribute to your code repository. 
+<img src="/output/tSNE.png" width="320" height="320">
+
+## Citation
+```bib
+@inproceedings{}
+```
