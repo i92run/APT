@@ -52,7 +52,7 @@ You can download pretrained models here:
 
 ### Topic's top-k words
 
-We can extract topic information, specifically the top words and their corresponding probabilities for each topic.
+We can extract topic information, specifically the top words for each topic.
 
 ```python
 model.vocab = {data['vocab_dict']}
