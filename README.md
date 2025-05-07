@@ -2,7 +2,7 @@
 
 This repository is the official implementation of *Adaptive Pseudo-Labeling via Word Coherence for Topic Modeling*. We propose adaptive pseudo-labeling for topic modeling (APT), a self-supervised framework that leverages document embeddings from pretrained transformers, directly reconstructs the Bag-of-Words (BoW) through the inherent relationship between documents and words, dynamically generates pseudo-labels, and integrates proxy-based deep metric learning to enhance coherence and diversity across topics.
 
-<img src="/display/framework.png" width="672" height="320">
+<img src="/display/overview" width="672" height="320">
 
 ## Requirements
 
