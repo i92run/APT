@@ -140,8 +140,6 @@ def main():
     output_dict['test_emb'] = test_emb
     output_dict['topic_names'] = data.target_names
     output_dict['vocab_dict'] = new_vocab_dict
-    output_dict['train_news'] = train_news
-    output_dict['test_news'] = test_news
     output_dict['train_parsed_news'] = train_parsed_news
     output_dict['test_parsed_news'] = test_parsed_news
 
