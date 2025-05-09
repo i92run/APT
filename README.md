@@ -42,9 +42,9 @@ To evaluate our model on {data.pickle}, run:
 python eval.py --data_path {data.pickle} --model_path {model_weights.pth} --tc_topk 15 --td_topk 15 
 ```
 
-## Pre-trained models
+## Pretrained models
 
-You can download pre-trained models here:
+You can download pretrained models here:
 
 - [Our model](https://drive.google.com/drive/folders/1mre-F8_7be9pVpwBsSUuVoJU6VSke0w7?usp=sharing) trained on all five benchmark datasets using default hyperparmeters.
 
