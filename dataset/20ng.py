@@ -143,7 +143,7 @@ def main():
     output_dict['train_parsed_news'] = train_parsed_news
     output_dict['test_parsed_news'] = test_parsed_news
 
-    with open('./dataset/20ng.pickle','wb') as fw:
+    with open('./20ng.pickle','wb') as fw:
         pickle.dump(output_dict, fw)
 
 
