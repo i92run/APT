@@ -46,7 +46,7 @@ python eval.py --data_path {data.pickle} --model_path {model_weights.pth} --tc_t
 
 You can download pretrained models here:
 
-- [Our model](https://drive.google.com/drive/folders/1mre-F8_7be9pVpwBsSUuVoJU6VSke0w7?usp=sharing) trained on all five benchmark datasets using default hyperparmeters.
+- [Our model](https://drive.google.com/drive/folders/1juvX9MzwZh9UI0nb9Gna_fUwjuhskTQ0?usp=sharing) trained on all five benchmark datasets using default hyperparmeters.
 
 ## Usage
 
