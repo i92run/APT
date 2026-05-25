@@ -19,7 +19,6 @@ The following lists the statistics of the datasets we used.
 | Dataset | Source link | Docs | Words | Categories |
 | :----- | :-----: | :-----: | :-----: | :-----: |
 |*20Newsgroups* | [20NG](http://qwone.com/~jason/20Newsgroups/) | 18846 | 9994 | 20 |
-|*AG's News* | [AG](http://groups.di.unipi.it/~gulli/AG_corpus_of_news_articles.html) | 38280 | 8727 | 4 |
 |*Wikitext-103* | [Wiki](https://developer.ibm.com/exchanges/data/all/wikitext-103/) | 28591 | 10000 | N/A |
 |*Web of Science* | [WoS](https://data.mendeley.com/datasets/9rw3vkcfy4/6) | 11967 | 8813 | 7 |
 |*Yahoo Answers Topics* | [Yahoo](https://github.com/LC-John/Yahoo-Answers-Topic-Classification-Dataset) | 29156 | 8902 | 10 |
@@ -46,7 +45,7 @@ python eval.py --data_path {data.pickle} --model_path {model_weights.pth} --tc_t
 
 You can download pretrained models here:
 
-- [Our model](https://drive.google.com/drive/folders/1juvX9MzwZh9UI0nb9Gna_fUwjuhskTQ0?usp=sharing) trained on all five benchmark datasets using default hyperparmeters.
+- [Our model](https://drive.google.com/drive/folders/1juvX9MzwZh9UI0nb9Gna_fUwjuhskTQ0?usp=sharing) trained on all benchmark datasets using default hyperparmeters.
 
 ## Usage
 
