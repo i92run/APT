@@ -19,7 +19,7 @@ The following lists the statistics of the datasets we used.
 | Dataset | Source link | Docs | Words | Categories |
 | :----- | :-----: | :-----: | :-----: | :-----: |
 |*20Newsgroups* | [20NG](http://qwone.com/~jason/20Newsgroups/) | 18846 | 9994 | 20 |
-|*Wikitext-103* | [Wiki](https://developer.ibm.com/exchanges/data/all/wikitext-103/) | 28591 | 10000 | N/A |
+|*Wikitext-103* | [Wiki](https://huggingface.co/datasets/Salesforce/wikitext) | 28591 | 10000 | N/A |
 |*Web of Science* | [WoS](https://data.mendeley.com/datasets/9rw3vkcfy4/6) | 11967 | 8813 | 7 |
 |*Yahoo Answers Topics* | [Yahoo](https://github.com/LC-John/Yahoo-Answers-Topic-Classification-Dataset) | 29156 | 8902 | 10 |
 
