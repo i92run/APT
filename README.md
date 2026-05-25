@@ -69,5 +69,12 @@ We can visualize embeddings for topics and documents using 'eval.py'. The image 
 
 ## Citation
 ```bib
-
+@inproceedings{yoon2026apl,
+  author = {Yoon, Bohan and Jang, Hyejin},
+  title = {Adaptive Pseudo-Labeling via Word Coherence for Topic Modeling},
+  booktitle = {Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining},
+  year = {2026},
+  doi = {10.1145/3770855.3817722},
+  url = {https://dl.acm.org/doi/10.1145/3770855.3817722}
+}
 ```
