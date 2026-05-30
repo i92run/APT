@@ -66,3 +66,21 @@ model.get_topic_word(top_k=k)
 We can visualize embeddings for topics and documents using 'eval.py'. The image is stored in the './output'.
 
 <img src="/output/tSNE.png" width="320" height="320">
+
+## Citation
+
+```bib
+@inproceedings{yoon2026adaptive,
+  author = {Bohan Yoon and Hyejin Jang},
+  title = {Adaptive Pseudo-Labeling via Word Coherence for Topic Modeling},
+  year = {2026}, isbn = {979-8-4007-2259-2/2026/08},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3770855.3817722},
+  doi = {10.1145/3770855.3817722},
+  booktitle = {Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2 (KDD '26)},
+  location = {Jeju Island, Republic of Korea}
+}
+```
+
+*The citation information may be updated upon final publication.*
